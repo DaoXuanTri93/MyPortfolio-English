@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let a = [1, 2, 3, 4, 2, 4, 6, 8, 10];
+        let x = 3;
+        let c = a[0];
+        let b = a[1];
+        a.sort(function sorrt(c, b) {
+            if (b > c) {
+                return -1
+            } else {
+                return 0;
+            }
+        });
+        console.log(a);
+        let center = a.length / 2;
+        let chan = 0;
+        let lenght = a.length - 1;
+        while (chan < lenght) {
+            if (a[center] == x) {
+                console.log(center);
+                break;
+            } else if (a[center] < x) {
+                // bỏ bên trái
+                chan = center + 1;
+            } else {
+                chan = center - 1;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
